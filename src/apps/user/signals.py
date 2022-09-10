@@ -2,9 +2,9 @@ from typing import List, Optional, Type
 from tortoise.signals import post_save
 from tortoise import BaseDBAsyncClient
 
-from business.serializers import BusinessSerializer
+from apps.business.serializers import BusinessSerializer
 from .models import User
-from business.models import Business
+from apps.business.models import Business
 
 
 @post_save(User)

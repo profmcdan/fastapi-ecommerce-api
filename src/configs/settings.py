@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     TEST_DATABASE_URL: str
     IS_TEST: str
+    CELERY_BROKER_URL: str
+    CELERY_RESULT_BACKEND: str
 
     class Config:
         env_file = '.env'

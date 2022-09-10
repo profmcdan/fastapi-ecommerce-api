@@ -4,7 +4,7 @@
 Initialize aerich for migrations 
 
 ```bash
-aerich init -t apps.configs.db.TORTOISE_ORM
+aerich init -t src.configs.db.TORTOISE_ORM
 aerich init-db
 tree migrations/
 ```

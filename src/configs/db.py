@@ -1,24 +1,28 @@
-"""Config of DB"""
-import os
-from pydantic import Field
-
-from apps.settings import get_settings
+from .settings import get_settings
 from .base import BaseSettings
 
-
-DB_MODELS = ['apps.user.models', 'apps.business.models', 'apps.product.models', 'aerich.models']
-
+DB_MODELS = [
+    'src.apps.user.models',
+    'src.apps.business.models',
+    'src.apps.product.models',
+    'aerich.models'
+]
 
 TORTOISE_ORM = {
     "connections": {
-         "default": get_settings().DATABASE_URL
+        "default": get_settings().DATABASE_URL
     },
     "apps": {
         "models": {
-            "models": ['apps.user.models', 'apps.business.models', 'apps.product.models', 'aerich.models'],
+            "models": [
+                'src.apps.user.models',
+                'src.apps.business.models',
+                'src.apps.product.models',
+                'aerich.models'
+            ],
             "default_connection": "default",
         }
-    },
+    }
 }
 
 
